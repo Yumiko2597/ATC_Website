@@ -7,17 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style_course.css">
-    <link rel="icon" type="image/x-icon" href="Image/1627437574293_20231206_100703_0000.png">
+    <link rel="icon" type="image/x-icon" href="Teacher&Banner/1627437574293_20231206_100703_0000.png">
 </head>
 <body>
     <nav class="headweb">
         <div class="container">
             <div class="nav-wrapper">
-                <div class="main-logo">
-                    <img class="logo" src="Image/1627437574293_20231206_100703_0000.png" height="110">
+                <div class="main-logo"> <!-- ชื่อและโลโก้แผนก -->
+                    <img class="logo" src="Teacher&Banner/1627437574293_20231206_100703_0000.png" height="110">
                     <h1 class="department">แผนกเทคโนโลยีสารสนเทศ วิทยาลัยเทคนิคพระนครศรีอยุธยา</h1>
                 </div>
-                <ul class="menu" id="myMenu">
+                <ul class="menu" id="myMenu"> <!-- แถบเครื่องมือเว็บไซต์ -->
                     <li>
                         <a class="headbutton mainindex" href="Index.html">หน้าหลัก</a>
                     </li>
@@ -34,6 +34,7 @@
                         <a class="headbutton person" href="teacher.html">ครูบุคลากร</a>
                     </li>
                 </ul>
+                <!-- ส่วนของ Hamburger Menu ไม่ต้องเปลี่ยนอะไร -->
                 <div class="ham-menu" onclick="toggleHam(this)">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
@@ -47,7 +48,7 @@
         <div class="box">
             <section class="blog">
                 <div class="container">
-                    <div class="blog-title">
+                    <div class="blog-title"> <!-- หัวข้อ จุดประสงค์ ไม่ต้องอัปเดตข้อมูล -->
                         <h3>จุดประสงค์หลักของสาขาวิชา</h3>
                     </div>
                     <div class="blog-con">
@@ -76,7 +77,7 @@
                                 </li>
                             </ul>
                             <br>
-                            <ul class="course-download">
+                            <ul class="course-download"> <!-- ลิ้งค์พาไปดาวน์โหลดหลักสูตรจากกระทวงการศึกษา -->
                                 <li>
                                     <a href="https://bsq.vec.go.th/Portals/9/Course/20/2562/20900/20901v4.pdf">หลักสูตรประกาศนียบัตรวิชาชีพ พุทธศักราช 2562 ประเภทวิชาเทคโนโลยีสารสนเทศและการสื่อสาร สาขาวิชาเทคโนโลยีสารสนเทศ(PDF)</a>
                                 </li>
@@ -90,7 +91,7 @@
                     <br>
                     <hr>
                     <br>
-                    <div class="blog-title">
+                    <div class="blog-title"> <!-- หัวข้อหลักสูตร ไม่จำเป็นต้องอัปเดตข้อมูล -->
                         <h3>หลักสูตรการเรียนการสอน</h3>
                     </div>
                     <div class="blog-con">
@@ -146,14 +147,14 @@
         </div>
     </div>
 
-    <footer>
+    <footer><!-- ส่วนท้ายของเว็บ ไม่ต้องแก้ไข -->
         <div class="footer-box">
             <div class="footer-content">
                 <div class="social">
-                    <a href="#" class="footer-btn">FB: Information Technology Ayutthaya Technical College</a>
+                    <a href="https://www.facebook.com/itayutthaya" class="footer-btn">FB: Information Technology Ayutthaya Technical College</a>
                 </div>
                 <div class="contact">
-                    <p>Tel : 092 - 8976428 ครูวีรชัย</p>
+                    <p>Tel : 098 - 5639878 ครูฉัตราสิณี</p>
                     <p>Tel : 087 - 8328490 ครูอลิษา</p>
                     <p>Tel : 083 - 2347080 ครูเอกพงษ์</p>
                 </div>
@@ -162,4 +163,27 @@
     </footer>
 </body>
 <script src="script.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCsfw5t45tCpgJeSfd9JhEz9X0A4wnjrnU",
+      authDomain: "information-technology-atc.firebaseapp.com",
+      projectId: "information-technology-atc",
+      storageBucket: "information-technology-atc.appspot.com",
+      messagingSenderId: "1040113116495",
+      appId: "1:1040113116495:web:d0f1432b1fcbbb5bd5513a",
+      measurementId: "G-YSN7T3N1PZ"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </html>
