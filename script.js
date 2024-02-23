@@ -1,3 +1,4 @@
+//ส่วนของการทำให้เกิดหน้า สไลด์โชว์
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -26,6 +27,7 @@ function showSlides(n) {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
+//ส่วนที่ทำให้ปุ่ม Hamburger Menu ขยับและใช้งานได้
 function toggleHam(x) {
   x.classList.toggle("change");
 
