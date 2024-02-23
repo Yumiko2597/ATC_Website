@@ -1,4 +1,4 @@
-*{
+*{/* Universal Selecter ใช้ควบคุม Element ทั้งหมด*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,53 +12,51 @@ html,body{
     max-width: 71.25rem;
     margin: 0 auto;
 }
-nav {
+nav {/*Navigation Bar หรือ แถบเครื่องมือ*/
     background-color: #333;
     position: fixed;
     width: 100%;
     z-index: 1000;
     align-items: center;
 }
-.box{
+.box{/*กล่องที่ใช้รวมรวมเนื้อหาส่วนใหญ่ของหน้าเว็บ*/
     background-color: white;
     margin: 0 20px 20px 20px;
     padding: 130px 30px 30px 30px;
     justify-content: center;
 }
-.headbutton{    
+.headbutton{    /*ตั้งค่าปุ่มบนแถบเมนู*/
     color: white;
     text-decoration: none;
     font-size: 1.04rem;
 }
-.menu{
+.menu{/*ใช้กำหนดรูปแบบการจัดเรียง*/
     display: flex;
     list-style: none;
 }
-.menu li{
+.menu li{/*กำหนดระยะขอบนอกด้านล่าง*/
     margin: 0 1rem;
 }
-.logo{
+.logo{/*ตั้งค่าขนาด ความสูง ความกว้างของโลโก้ และระยะพื้นที่ขอบใน*/
   height: 5rem;
   padding: 1rem 1rem;
   max-width: 5rem;
   float: left;
 }
-.department{
+.department{/*ตั้งค่าขนาดและสีฟอนต์โลโก้*/
 color: white;
 font-size: 1rem;
 }
-.main-logo{
+.main-logo{/*จัดรูปแบบของกล่องโลโก้*/
 align-items: center;
 display: flex;
 }
-body{
-    font-family: 'Bai Jamjuree', sans-serif;
-}
-.blog-title{
+
+.blog-title{ /*กำหนดขอบนอกของบล็อก*/
     margin: 2rem;
 }
 
-.blog-title h3{
+.blog-title h3{/*ปรับขนาด ตั้งค่าพื้นหลัง ตีกรอบ หัวข้อของบล็อก*/
   font-size: 2rem;
   padding: .5rem .5rem;
   border: 2px solid black;
@@ -67,41 +65,28 @@ body{
   text-align: center;
 }
 
-.blog-con{
+.blog-con{ /*จัดรูปแบบเนื้อหาภายในบล็อก*/
     display: grid;
     grid-auto-columns: auto;
     column-gap: 2rem;
 }
 
-.blog-item{
+.blog-item{/*กำหนดพื้นที่รอบๆ ไอเท็ม*/
   margin-bottom: 1rem;
 }
 
-.blog-item img{
-    width: 100%;
-    height: auto;
-}
-
-.blog-item p{
+.blog-item p{/*เว้นพื้นที่โดยรอบของพารากราฟ*/
   padding: 1rem;
 }
-.blog-item h4{
+.blog-item h4{/*เว้นพื้นที่ด้านบน และจัดขนาดฟอนต์*/
   padding-top: 1rem;
   font-size: 1rem;
 }
-
-.blog-item .blog-btn{
-    background-color: skyblue;
-    text-decoration: none;
-    color: black;
-    border-radius: 5px;
-    padding: .5rem 1rem;
-}
-.depart-objective{
+.depart-objective{ /*เปลี่ยนสัญลักษณ์ของลิส ให้เป็นตัวเลข*/
   list-style: decimal;
 }
 
-.footer-box{
+.footer-box{/*ตั้งค่าส่วนของท้ายเว็บ*/
   background-color: #333;
   width: 100%;
   height: 200px;
@@ -109,22 +94,22 @@ body{
   padding-top: 2rem;
 }
 
-.social{
+.social{/*ตั้งค่าเว้นพื้นที่ขอบใน */
   padding: 0 2rem 2rem 2rem;
 }
 
-.social .footer-btn{
+.social .footer-btn{/*ตั้งค่าสีปุ่ม*/
   color: white;
 }
 
-.contact {
+.contact {/*กำหนดรูปแบบการจัดเรียง*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: white;
   padding: 2rem;
 }
 
-.ham-menu {
+.ham-menu {/*ตั้งค่าจัดรูปแบบของ Ham-menu*/
   display: inline-block;
   cursor: pointer;
   position: absolute;
@@ -132,7 +117,7 @@ body{
   top: 1.25rem;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1, .bar2, .bar3 {/*กำหนดขนาดแถบเส้นของ Ham-menu*/
   width: 35px;
   height: 5px;
   background-color: white;
@@ -153,7 +138,7 @@ body{
   transform: translate(0, -11px) rotate(45deg);
 }
 
-.nav-wrapper{
+.nav-wrapper{/*ไว้ใช้กำหนดตั้งค่า ให้แถบเครื่องมือทั้งหมด จัดเรียงแบบ Flex และเว้นระยะห่าง*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -161,7 +146,7 @@ body{
   position: relative;
 }
 
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:1024px) {/*ถ้าหน้าจอมีขนาดมากกว่า 1024px ทำให้ Ham-menu หายไป และขยับพื้นที่กล่องใหญ่*/
   .ham-menu{
     display: none;
   }
@@ -171,7 +156,7 @@ body{
   }
 }
 
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:1024px){/*ถ้าหน้าจอต่ำกว่า 1024px ลดขนาดฟอนต์ ลดขนาดต่างๆให้ตอบสนองต่อจอที่เล็กกว่า*/
   *{
     font-size: calc(60% + 0.8vmin);
   }

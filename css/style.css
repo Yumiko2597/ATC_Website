@@ -1,4 +1,4 @@
-*{
+*{ /* Universal Selecter ใช้ควบคุม Element ทั้งหมด*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,67 +6,85 @@
 }
 html,body{
   background-color: lightgrey;
-
 }
+
 .container{
   max-width: 71.25rem;
   margin: 0 auto;
 }
-nav {
+
+nav { /*Navigation Bar หรือ แถบเครื่องมือ*/
   background-color: #333;
   position: fixed;
   width: 100%;
   z-index: 1000;
   align-items: center;
 }
-.box{
+
+.nav-wrapper{ /*ไว้ใช้กำหนดตั้งค่า ให้แถบเครื่องมือทั้งหมด จัดเรียงแบบ Flex และเว้นระยะห่าง*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: relative;
+}
+
+.box{ /*กล่องที่ใช้รวมรวมเนื้อหาส่วนใหญ่ของหน้าเว็บ*/
   background-color: white;
   margin: 0 20px 20px 20px;
   padding: 130px 30px 30px 30px;
   justify-content: center;
 }
-.headbutton{    
+
+.headbutton{ /*ตั้งค่าปุ่มบนแถบเมนู*/
   color: white;
   text-decoration: none;
   font-size: 1.04rem;
 }
-.menu{
+
+.menu{ /*ใช้กำหนดรูปแบบการจัดเรียง*/
   display: flex;
   list-style: none;
 }
-.menu li{
+
+.menu li{ /*กำหนดระยะขอบนอกด้านล่าง*/
   margin: 0 1rem;
 }
-.logo{
+
+.logo{ /*ตั้งค่าขนาด ความสูง ความกว้างของโลโก้ และระยะพื้นที่ขอบใน*/
 height: 5rem;
 padding: 1rem 1rem;
 max-width: 5rem;
 float: left;
 }
-.department{
+
+.department{ /*ตั้งค่าขนาดและสีฟอนต์โลโก้*/
 color: white;
 font-size: 1rem;
 }
-.main-logo{
+
+.main-logo{ /*จัดรูปแบบของกล่องโลโก้*/
 align-items: center;
 display: flex;
 }
-body{
-  font-family: 'Bai Jamjuree', sans-serif;
-}
-.hero-con{
+
+.hero-con{ /*ตั้งค่ากล่อง ข่าวใหญ่ ให้เป็นรูปแบบ Flex*/
     display: flex;
 }
-.hero-info{
+
+.hero-info{ /*ตั้งค่าพื้นที่ของเนื้อหา ต่อ กล่อง*/
     width: 50%;
 }
-.hero-info h3{
+
+.hero-info h3{ /*ตั้งค่าขนาดฟอนต์*/
     font-size: 2rem;
 }
-.hero-info p{
+
+.hero-info p{ /*กำหนดขอบนอกด้านบนของ เนื้อหาคำอธิบาย*/
     margin: 1rem 0;
 }
-.hero-info .hero-btn{
+
+.hero-info .hero-btn{ /*ตั้งค่าปุ่มกดในส่วน ข่าวใหญ่*/
     display: inline-block;
     background-color: skyblue;
     text-decoration: none;
@@ -75,17 +93,17 @@ body{
     padding: .5rem 1rem;
 }
 
-.hero-img img{
+.hero-img img{ /*ตั้งค่า รูปภาพของ ข่าวใหญ่*/
     width: 100%;
     padding: 2rem;
     height: auto;
 }
 
-.blog-title{
+.blog-title{ /*ตั้งค่าขอบนอกของหัวเรื่อง ข่าวรอง ในหน้าหลัก*/
     margin: 2rem;
 }
 
-.blog-title h3{
+.blog-title h3{ /*ตั้งค่าข้อความ หัวข้อข่าวรอง*/
   font-size: 2rem;
   padding: .5rem .5rem;
   border: 2px solid black;
@@ -94,30 +112,30 @@ body{
   text-align: center;
 }
 
-.blog-con{
+.blog-con{ /*จัดรูปแบบส่วนของข่าวรองให้อยู่ในแบบ Grid*/
     display: grid;
     grid-auto-columns: auto;
     column-gap: 2rem;
 }
 
-.blog-item{
+.blog-item{ /*ตั้งค่าขอบนอกด้านล่าง*/
   margin-bottom: 1rem;
 }
 
-.blog-item img{
+.blog-item img{ /*ตั้งค่าขนาดรูปข่าวรอง*/
     width: 100%;
     height: auto;
 }
 
-.blog-item p{
+.blog-item p{ /*กำหนดพื้นที่ขอบในของคำอธิบาย*/
   padding: 1rem;
 }
-.blog-item h4{
+.blog-item h4{ /*ตั้งค่าชื่อเรื่องของข่าวรอง*/
   padding-top: 1rem;
   font-size: 1rem;
 }
 
-.blog-item .blog-btn{
+.blog-item .blog-btn{ /*ตั้งค่าปุ่มกดในข่าวรองแต่ละอัน*/
     background-color: skyblue;
     text-decoration: none;
     color: black;
@@ -125,7 +143,7 @@ body{
     padding: .5rem 1rem;
 }
 
-.read-more-news{
+.read-more-news{ /*ตั้งค่าปุ่มที่ไว้ใช้พาไปหน้าเว็บรวมข่าวต่างๆ*/
   background-color: rgba(191, 231, 247, 0.788);
     text-decoration: none;
     color: black;
@@ -133,27 +151,31 @@ body{
     padding: .5rem 1rem;
 }
 
-.myslidebox-con{
+.myslidebox-con{ /*กำหนกขนาดกล่องสไลด์โชว์*/
   max-width:100%;
   height: auto;
 }
 
-.mySlides {display: none}
-img {vertical-align: middle;
+.mySlides { /*ทำให้รูปภาพที่จะเอามาใส่ในสไลด์หายไป ไว้เอาไปใช้กับ Javascript*/
+  display: none
+}
+
+img { /*กำหนดขนาดรูปต่างๆ*/
+  vertical-align: middle;
   max-width: 100%;
   height: 450px;
   object-fit: cover;
 }
 
 
-/* Slideshow container */
+/* ตั้งค่าขนาดของ สไลด์โชว์ */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Next & previous buttons */
+/* ตั้งค่า ปุ่ม ก่อนหน้าและ ถัดไป ในสไลด์ */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -169,17 +191,17 @@ img {vertical-align: middle;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* กำหนดลูกศรถัดไปให้อยู่ด้านขวา */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* ถ้าเอาเมาส์ไปวางบนปุ่มถัดไป จะเปลี่ยนพื้นหลังปุ่มให้เป็นสี black แบบจางๆ */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-/* The dots/bullets/indicators */
+/* จุดลำดับตำแหน่งของหน้าสไลด์ */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -191,30 +213,31 @@ img {vertical-align: middle;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active, .dot:hover { /*ตอนที่ สไดล์เลื่อนมาที่สไลด์ X หรือ เอาเมาส์ไปวางบนจุด เปลี่ยนสีให้เข้มขึ้น*/
   background-color: #717171;
 }
 
-/* Fading animation */
+/* อนิเมชั่นการจางของสไลด์ */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
+@keyframes fade { 
   from {opacity: .4} 
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* สำหรับจอขนาดเล็ก ลดขนาด(ปุ่มสไลด์)*/
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-.mySlides-box{
+
+.mySlides-box{ 
     box-sizing: border-box;
 }
 
-.footer-box{
+.footer-box{ /*ตั้งค่าส่วนของท้ายเว็บ*/
   background-color: #333;
   width: 100%;
   height: 200px;
@@ -222,22 +245,22 @@ img {vertical-align: middle;
   padding-top: 2rem;
 }
 
-.social{
+.social{ /*ตั้งค่าเว้นพื้นที่ขอบใน */
   padding: 0 2rem 2rem 2rem;
 }
 
-.social .footer-btn{
+.social .footer-btn{ /*ตั้งค่าสีปุ่ม*/
   color: white;
 }
 
-.contact {
+.contact { /*กำหนดรูปแบบการจัดเรียง*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: white;
   padding: 2rem;
 }
 
-.ham-menu {
+.ham-menu { /*ตั้งค่าจัดรูปแบบของ Ham-menu*/
   display: inline-block;
   cursor: pointer;
   position: absolute;
@@ -245,7 +268,7 @@ img {vertical-align: middle;
   top: 1.25rem;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1, .bar2, .bar3 { /*กำหนดขนาดแถบเส้นของ Ham-menu*/
   width: 35px;
   height: 5px;
   background-color: white;
@@ -253,28 +276,22 @@ img {vertical-align: middle;
   transition: 0.4s;
 }
 
-/* Rotate first bar */
+/* หมุนแถบแรก */
 .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
 }
 
-/* Fade out the second bar */
+/* ทำให้แถบสองหายไป */
 .change .bar2 {opacity: 0;}
 
-/* Rotate last bar */
+/* หมุนแถบสาม */
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-.nav-wrapper{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  position: relative;
-}
+/*ส่วนของ Respontsive*/
 
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:1024px) { /*ถ้าหน้าจอมีขนาดมากกว่า 1024px ทำให้ Ham-menu หายไป และขยับพื้นที่กล่องใหญ่*/
   .ham-menu{
     display: none;
   }
@@ -284,44 +301,44 @@ img {vertical-align: middle;
   }
 }
 
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:1024px){/*ถ้าหน้าจอต่ำกว่า 1024px ลดขนาดฟอนต์ ลดขนาดต่างๆให้ตอบสนองต่อจอที่เล็กกว่า*/
   *{
-    font-size: calc(60% + 0.8vmin);
+    font-size: calc(60% + 0.8vmin); /*คำนวนขนาดจอและลดขนาดฟอนต์*/
   }
   .menu-active{
-    display: block !important;
+    display: block !important; 
   }
-  .menu{
+  .menu{ /*ทำให้แถบเมนูหายไป*/
     display: none;
     width: 100%;
   }
 
-  .nav-wrapper{
+  .nav-wrapper{ /*จัดเรียงแถบเมนูใหม่ให้เรียงเป็น คอลลัมแทน*/
     padding: 0 1rem;
     height: auto;
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .nav-wrapper .department{
+  .nav-wrapper .department{ /*ปรับขนาดฟอนต์แผนก*/
     font-size: 1.25rem;
   }
 
-  .menu li{
+  .menu li{ /*แบ่งพื้นที่ให้แก่ เมนูแต่ละอัน*/
     margin: 1rem 0;
     padding: 1rem 0.5rem;
     border-top: 1px solid #ccc;
     transition: 0.3s;
   }
 
-  .menu li:hover{
+  .menu li:hover{ /*เมื่อเอาเมาส์ไปวาง พื้นหลังเข้มขึ้น*/
     background-color: #2a2a2a;
   }
 }
 
 @media only screen and (min-width:425px) {
 
-  .blog-con{
+  .blog-con{ /*ปรับแนวการจัดเรียง หน้าจอที่มากกว่า 425px*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 2rem;
